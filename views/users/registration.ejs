@@ -1,0 +1,110 @@
+<%- include("../layouts/header.ejs") %>
+<!-- <form action="/register" method="POST">
+  <input type="text" name="name" placeholder="Enter Name" required />
+  <br />
+  <input type="email" name="email" placeholder="Enter Email" required />
+  <br />
+  <input type="text" name="mobile" placeholder="Enter Mobile" required />
+  <br />
+  <input
+    type="password"
+    name="password"
+    placeholder="Enter Password"
+    required
+  />
+  <br />
+  <input type="submit" value="register" />
+</form> -->
+
+<!-- new -->
+<section class="container vh-100">
+  <div class="py-5 px-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+        <div class="card" style="border-radius: 1rem">
+          <div class="card-body p-7 text-center">
+            <!-- form -->
+            <form
+              class="form mb-md-5 mt-md-4 pb-6"
+              action="/register"
+              method="post"
+            >
+              <h2 class="fw-bold mb-2 text-uppercase">User Registration</h2>
+              <p class="text-50 mb-5">Please enter your credentials</p>
+              <% if(message !="undefined"){%>
+
+              <p style="color: green"><%= message %></p>
+
+              <% }; %>
+              <!-- name -->
+              <div class="fname form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInputname"
+                  placeholder="Enter Name"
+                  required
+                  name="name"
+                />
+                <label for="floatingInputname">Enter Your Name</label>
+              </div>
+              <!-- email -->
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInputemail"
+                  placeholder="Enter Email"
+                  required
+                  name="email"
+                />
+                <label for="floatingInputemail">Enter Your Email address</label>
+              </div>
+              <!-- mobile -->
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInputmobile"
+                  placeholder="Enter Mobile"
+                  required
+                  name="mobile"
+                />
+                <label for="floatingInputmobile">Enter Your Mobile</label>
+              </div>
+              <!-- password -->
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Enter Password"
+                  required
+                  name="password"
+                />
+                <label for="floatingPassword">Enter Your Password</label>
+              </div>
+              <!-- <input type="submit" value="register" /> -->
+              <button
+                data-mdb-button-init
+                data-mdb-ripple-init
+                class="btn btn-primary btn-lg px-5 m-2"
+                type="submit"
+              >
+                Register
+              </button>
+              <div>
+                <p class="m-2">
+                  Already Registered?
+                  <a href="/" class="fw-bold">Login</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("../layouts/footer.ejs") %>

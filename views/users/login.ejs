@@ -1,0 +1,99 @@
+<%- include("../layouts/header.ejs") %>
+
+<!-- Login -->
+<div class="container vh-100">
+  <div class="py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <!-- form -->
+            <form
+              action="/"
+              method="post"
+              class="mb-md-5 mt-md-4 pb-5 d-flex flex-column"
+            >
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+
+              <!-- message ejs -->
+              <% if(typeof message !== "undefined"){ %>
+              <h4 style="color: red"><%= message %></h4>
+              <% } %> <% if(typeof message1 !== "undefined"){ %>
+              <h4 style="color: green"><%= message1 %></h4>
+              <% } %>
+
+              <p class="text-50 mb-5">Please enter your Email and password!</p>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Enter Email"
+                  required
+                  name="email"
+                />
+                <label for="floatingInput">Enter Email</label>
+              </div>
+
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Enter Password"
+                  required
+                  name="password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+
+              <div class="form-check form-check-inline mt-2">
+                <input
+                  class="form-floating-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label for="flexCheckDefault"> show password </label>
+              </div>
+
+              <!-- <p class="small mb-5 pb-lg-2">
+              <a class="text-decoration-none" href="#!"
+                >Forgot password?</a
+              >
+            </p> -->
+
+              <button
+                data-mdb-button-init
+                data-mdb-ripple-init
+                class="btn btn-primary btn-lg px-5 mt-3"
+                type="submit"
+              >
+                Login
+              </button>
+            </form>
+
+            <div>
+              <p class="mb-0">
+                Don't have an account?
+                <a href="/register" class="fw-bold">Register</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document
+    .getElementById("flexCheckDefault")
+    .addEventListener("change", function () {
+      document.getElementById("floatingPassword").type = this.checked
+        ? "text"
+        : "password";
+    });
+</script>
+
+<%- include("../layouts/footer.ejs") %>

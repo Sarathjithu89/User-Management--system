@@ -1,0 +1,39 @@
+<%- include("../layouts/header.ejs") %>
+
+<!-- home -->
+<div class="container">
+  <% if(typeof message !== "undefined"){ %>
+  <h4 style="color: green"><%= message %></h4>
+  <% } %>
+  <header
+    class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none justify-content-center"
+    >
+      <span class="fs-4 align-items-center justify-content-center">Home</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <a href="/logout" class="nav-link"
+        ><button class="nav-item btn btn-danger">Logout</button></a
+      >
+    </ul>
+  </header>
+</div>
+<!--  -->
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold text-body-emphasis">Welcome <%= user.name %></h1>
+
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ullam
+      corporis praesentium officiis maxime debitis aliquam laudantium quaerat
+      asperiores sed hic incidunt ex, necessitatibus eligendi labore fugiat
+      illum ad perspiciatis?
+    </p>
+  </div>
+</div>
+
+<%- include("../layouts/footer.ejs") %>
