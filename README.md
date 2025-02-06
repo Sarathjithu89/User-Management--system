@@ -15,7 +15,7 @@ This project is designed to manage user information and provide various function
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/user-management.git
+   git clone https://github.com/Sarathjithu89/User-Management--system.git
    ```
 2. Navigate to the project directory:
    ```bash
