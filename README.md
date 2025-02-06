@@ -19,7 +19,7 @@ This project is designed to manage user information and provide various function
    ```
 2. Navigate to the project directory:
    ```bash
-   cd user-management
+   cd User-Management--system
    ```
 3. Install dependencies:
    ```bash
