@@ -4,7 +4,7 @@
   "description": "This is a project to learn about user mangments and connecting data base",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sarath",
